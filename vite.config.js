@@ -1,10 +1,12 @@
 /* eslint-env node */
-import "dotenv/config";
+import dotenv from 'dotenv'
+
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import Vue from "@vitejs/plugin-vue";
 
-process.env.VITE_BACKEND_URL = `http://${process.env.KIRBY_DEV_HOSTNAME}:${process.env.KIRBY_DEV_PORT}`;
+dotenv.config()
+process.env.VITE_BACKEND_URL = `https://${process.env.KIRBY_DEV_HOSTNAME}:${process.env.KIRBY_DEV_PORT}`;
 process.env.VITE_BACKEND_API_SLUG = process.env.CONTENT_API_SLUG;
 process.env.VITE_MULTILANG = process.env.KIRBY_MULTILANG;
 
@@ -36,6 +38,7 @@ export default ({ mode }) =>
       cors: true,
       port: 3000,
       strictPort: true,
+      https: true,
     },
 
     optimizeDeps: {

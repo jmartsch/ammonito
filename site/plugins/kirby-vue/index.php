@@ -9,7 +9,7 @@ load([
     'options' => [
         'entry' => 'index.js',
         'outDir' => 'dist',
-        'devServer' => 'http://localhost:3000'
+        'devServer' => 'https://localhost:3000'
     ],
     'hooks' => [
         // Explicitly register catch-all routes only when Kirby and all plugins

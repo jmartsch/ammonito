@@ -111,7 +111,7 @@ class Vite
      */
     protected function assetDev(string $file): string
     {
-        return option('johannschopplich.kirby-vue.devServer', 'http://localhost:3000') . "/$file";
+        return option('johannschopplich.kirby-vue.devServer', 'https://localhost:3000') . "/$file";
     }
 
     /**
